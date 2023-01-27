@@ -1,0 +1,52 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-zero"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observation-01",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11557-6",
+              "display": "Carbon dioxide in blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-zero",
+          "display": "P. van de Heuvel"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "observation-02",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11557-6",
+              "display": "Carbon dioxide in blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "patient-zero"
+        }
+      }
+    }
+
+  ]
+}

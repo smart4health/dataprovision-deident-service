@@ -1,0 +1,40 @@
+{
+  "rules": [
+    {
+      "path": "Encounter.hospitalization.admitSource",
+      "method": "redact"
+    },
+    {
+      "path": "Encounter.hospitalization.origin.ofType(location).type",
+      "method": "redact"
+    },
+    {
+      "path": "Encounter.location.location.identifier.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "Encounter.location.location.type.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "Encounter.partOf.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "Encounter.period.end",
+      "method": "dateShift"
+    },
+    {
+      "path": "Encounter.period.start",
+      "method": "dateShift"
+    },
+    {
+      "path": "Encounter.subject.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "Encounter.type.descendants()",
+      "method": "keep"
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "b6be677c-4146-4539-ae82-59133d1aed83",
+  "extension": [
+    {
+      "url": "TODO",
+      "valueCodeableConcept": {
+        "id": "PAGE_EXTENSION",
+        "coding": [
+          {
+            "code": "personal_data",
+            "display": "Personal data"
+          },
+          {
+            "code": "medical_history",
+            "display": "Conditions"
+          },
+          {
+            "code": "risk_factors",
+            "display": "Risk factors"
+          }
+        ]
+      }
+    }
+  ],
+  "title": "Medical history",
+  "status": "active",
+  "subjectType": [
+    "Patient"
+  ],
+  "item": [
+    {
+      "extension": [
+        {
+          "url": "TODO",
+          "valueCode": "personal_data"
+        }
+      ],
+      "linkId": "job_position",
+      "text": "Occupation",
+      "type": "text",
+      "required": false,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "extension": [
+        {
+          "url": "TODO",
+          "valueCode": "personal_data"
+        }
+      ],
+      "linkId": "weight",
+      "text": "Weight in kg",
+      "type": "quantity",
+      "required": true,
+      "repeats": false,
+      "readOnly": false,
+      "option": [
+        {
+          "valueInteger": 0
+        },
+        {
+          "valueInteger": 300
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "TODO",
+          "valueCode": "personal_data"
+        }
+      ],
+      "linkId": "height",
+      "text": "Height in cm",
+      "type": "quantity",
+      "required": true,
+      "repeats": false,
+      "readOnly": false,
+      "option": [
+        {
+          "valueInteger": 0
+        },
+        {
+          "valueInteger": 300
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "TODO",
+          "valueCode": "personal_data"
+        }
+      ],
+      "linkId": "blood_type",
+      "text": "Blood type",
+      "type": "open-choice",
+      "required": false,
+      "repeats": false,
+      "readOnly": false,
+      "option": [
+        {
+          "valueString": "0"
+        },
+        {
+          "valueString": "A"
+        },
+        {
+          "valueString": "B"
+        },
+        {
+          "valueString": "AB"
+        }
+      ],
+      "item": [
+        {
+          "linkId": "blood_rh_factor",
+          "text": "Blood type RH factor",
+          "type": "open-choice",
+          "required": false,
+          "repeats": false,
+          "readOnly": false,
+          "option": [
+            {
+              "valueString": "Positive"
+            },
+            {
+              "valueString": "Negative"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "TODO",
+          "valueCode": "risk_factors"
+        }
+      ],
+      "linkId": "smoking",
+      "text": "Are you, or have you ever been, a smoker?",
+      "type": "boolean",
+      "required": true,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "extension": [
+        {
+          "url": "TODO",
+          "valueCode": "risk_factors"
+        }
+      ],
+      "linkId": "alcohol",
+      "text": "Do you drink alcohol regularly?",
+      "type": "boolean",
+      "required": true,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "extension": [
+        {
+          "url": "TODO",
+          "valueCode": "risk_factors"
+        }
+      ],
+      "linkId": "overweight",
+      "text": "Are you overweight?",
+      "type": "boolean",
+      "required": true,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "extension": [
+        {
+          "url": "TODO",
+          "valueCode": "risk_factors"
+        }
+      ],
+      "linkId": "blood_sugar",
+      "text": "Have you ever had high levels of blood glucose?",
+      "type": "boolean",
+      "required": true,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "extension": [
+        {
+          "url": "TODO",
+          "valueCode": "risk_factors"
+        }
+      ],
+      "linkId": "blood_pressure",
+      "text": "Have you ever had high blood pressure?",
+      "type": "boolean",
+      "required": true,
+      "repeats": false,
+      "readOnly": false
+    }
+  ]
+}

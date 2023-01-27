@@ -1,0 +1,1 @@
+ALTER TABLE coding_failed ADD COLUMN concept_id INTEGER NULL

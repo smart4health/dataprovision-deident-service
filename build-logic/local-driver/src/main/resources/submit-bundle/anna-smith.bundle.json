@@ -1,0 +1,631 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "90766d7f-4165-4420-923c-9a26f8eaca36",
+        "meta": {
+          "profile": [
+            "http://fhir.smart4health.eu/StructureDefinition/s4h-encounter"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.smart4health.eu/CodeSystem/ittm-visit-id",
+            "value": "test-initial"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://fhir.smart4health.eu/CodeSystem/s4h-encounter-type",
+                "code": "back-pain-treatment",
+                "display": "Back pain treatment"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/CD9B26EA-234E-46BB-91A1-D67B23064396",
+          "display": "John Doe"
+        },
+        "period": {
+          "start": "2019-10-10",
+          "end": "2019-10-10"
+        },
+        "serviceProvider": {
+          "identifier": {
+            "system": "http://fhir.smart4health.eu/CodeSystem/ittm-location-id",
+            "value": "clinic-zs-ug-1"
+          }
+        },
+        "partOf": {
+          "identifier": {
+            "system": "http://fhir.smart4health.eu/CodeSystem/ittm-case-id",
+            "value": "test-session-1"
+          }
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "d2660c15-20aa-4d34-8c24-b5766f9c24b5",
+        "meta": {
+          "profile": [
+            "http://fhir.smart4health.eu/StructureDefinition/s4h-encounter"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.smart4health.eu/CodeSystem/ittm-visit-id",
+            "value": "test-final"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://fhir.smart4health.eu/CodeSystem/s4h-encounter-type",
+                "code": "back-pain-treatment",
+                "display": "Back pain treatment"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/CD9B26EA-234E-46BB-91A1-D67B23064396",
+          "display": "John Doe"
+        },
+        "period": {
+          "start": "2020-07-16",
+          "end": "2020-07-16"
+        },
+        "serviceProvider": {
+          "identifier": {
+            "system": "http://fhir.smart4health.eu/CodeSystem/ittm-location-id",
+            "value": "clinic-zs-ug-1"
+          }
+        },
+        "partOf": {
+          "identifier": {
+            "system": "http://fhir.smart4health.eu/CodeSystem/ittm-case-id",
+            "value": "test-session-1"
+          }
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "010df0da-91b4-4044-a130-e5d69bede012",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/bodyheight",
+            "http://fhir.smart4health.eu/StructureDefinition/s4h-observation-base"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body height"
+            }
+          ],
+          "text": "Body height"
+        },
+        "subject": {
+          "display": "Marie Lux-Brennard"
+        },
+        "effectiveDateTime": "2019-07-02",
+        "performer": [
+          {
+            "identifier": {
+              "use": "official",
+              "system": "http://fhir.de/NamingSystem/kbv/lanr",
+              "value": "123456701"
+            },
+            "display": "Dr. Schmidt"
+          }
+        ],
+        "valueQuantity": {
+          "value": 173,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "31c74d53-7da7-44c6-9854-2acdf88dc2f7",
+        "meta": {
+          "profile": [
+            "http://fhir.smart4health.eu/StructureDefinition/s4h-observation-base"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "883-9",
+              "display": "ABO group [Type] in Blood"
+            }
+          ],
+          "text": "Blood group"
+        },
+        "subject": {
+          "display": "Marie Lux-Brennard"
+        },
+        "effectiveDateTime": "2019-09-17",
+        "performer": [
+          {
+            "identifier": {
+              "use": "official",
+              "system": "http://fhir.de/NamingSystem/kbv/lanr",
+              "value": "123456701"
+            },
+            "display": "Dr. Schmidt"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "LA19710-5",
+              "display": "Group A"
+            }
+          ],
+          "text": "Group A"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "88b869b1-2e67-461c-8c3f-5b814ec11819",
+        "meta": {
+          "profile": [
+            "http://fhir.smart4health.eu/StructureDefinition/s4h-observation-base"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "social-history",
+                "display": "Social History"
+              }
+            ],
+            "text": "Social History"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85658-3",
+              "display": "Occupation Type"
+            }
+          ],
+          "text": "Occupation Type"
+        },
+        "subject": {
+          "display": "Marie Lux-Brennard"
+        },
+        "effectiveDateTime": "2019-07-27",
+        "valueString": "Baker"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "b5c6c6c9-11a5-4e9b-a273-d4daecb39507",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/bodyweight",
+            "http://fhir.smart4health.eu/StructureDefinition/s4h-observation-base"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "3141-9",
+              "display": "Body weight Measured"
+            }
+          ]
+        },
+        "subject": {
+          "display": "Marie Lux-Brennard"
+        },
+        "effectiveDateTime": "2016-03-28",
+        "performer": [
+          {
+            "identifier": {
+              "use": "official",
+              "system": "http://fhir.de/NamingSystem/kbv/lanr",
+              "value": "123456701"
+            },
+            "display": "Dr. Schmidt"
+          }
+        ],
+        "valueQuantity": {
+          "value": 69,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "ce77104d-9bf9-4fcf-b061-57140b2b0e9c",
+        "meta": {
+          "profile": [
+            "http://fhir.smart4health.eu/StructureDefinition/s4h-observation-base"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10331-7",
+              "display": "Rh [Type] in Blood"
+            }
+          ],
+          "text": "Rh in blood"
+        },
+        "subject": {
+          "display": "Marie Lux-Brennard"
+        },
+        "effectiveDateTime": "2019-09-17",
+        "performer": [
+          {
+            "identifier": {
+              "use": "official",
+              "system": "http://fhir.de/NamingSystem/kbv/lanr",
+              "value": "123456701"
+            },
+            "display": "Dr. Schmidt"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "LA6576-8",
+              "display": "Positive"
+            }
+          ],
+          "text": "Positive"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "4824ea74-7182-4628-9828-e2ee967eae37",
+        "meta": {
+          "profile": [
+            "http://fhir.smart4health.eu/StructureDefinition/s4h-patient"
+          ]
+        },
+        "name": [
+          {
+            "text": "Marie Lux-Brennard",
+            "family": "Lux-Brennard",
+            "given": [
+              "Marie"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "123-456-789",
+            "use": "home"
+          },
+          {
+            "system": "email",
+            "value": "malubr@example.com"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1998-04-17",
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "Beispielstr. 17"
+            ],
+            "city": "Bärstadt",
+            "postalCode": "12345",
+            "country": "Germany"
+          }
+        ],
+        "contact": [
+          {
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                    "code": "MTH",
+                    "display": "Mother"
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "text": "Annabel Lux-Brennard",
+              "family": "Lux-Brennard",
+              "given": [
+                "Annabel"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "987-654-321",
+                "use": "home"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "0caa39e7-6f1b-408c-bac9-52b38dd791be",
+        "meta": {
+          "profile": [
+            "http://fhir.smart4health.eu/Questionnaire/post-session-questionnaire|1.0.0",
+            "http://fhir.smart4health.eu/Questionnaire/post-training-questionnaire|0.0.1",
+            "http://fhir.smart4health.eu/Questionnaire/pre-session-questionnaire|1.0.0",
+            "http://fhir.smart4health.eu/Questionnaire/pre-training-questionnaire|0.0.1"
+          ]
+        },
+        "language": "en",
+        "questionnaire": "http://fhir.smart4health.eu/Questionnaire/pre-session-questionnaire|1.0.0",
+        "status": "completed",
+        "subject": {
+          "display": "Marie Lux-Brennard"
+        },
+        "encounter": {
+          "identifier": {
+            "system": "http://fhir.smart4health.eu/CodeSystem/ittm-visit-id",
+            "value": "test-initial"
+          }
+        },
+        "authored": "2019-10-10T20:43:23.123Z",
+        "item": [
+          {
+            "linkId": "current_back_pain_level",
+            "text": "Please indicate your current pain level",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA6114-8"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "average_back_pain_level",
+            "text": "Please indicate your average pain level during the past four weeks",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA10137-0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "max_back_pain_level_4w",
+            "text": "Please indicate your maximum pain level during the past four weeks",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA10140-4"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "taking_painkillers",
+            "text": "Are you taking painkillers at the moment?",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA33-6"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "8c1b31e7-cb8f-45bf-ac00-534572b50d16",
+        "meta": {
+          "profile": [
+            "http://fhir.smart4health.eu/Questionnaire/post-session-questionnaire|1.0.0",
+            "http://fhir.smart4health.eu/Questionnaire/post-training-questionnaire|0.0.1",
+            "http://fhir.smart4health.eu/Questionnaire/pre-session-questionnaire|1.0.0",
+            "http://fhir.smart4health.eu/Questionnaire/pre-training-questionnaire|0.0.1"
+          ]
+        },
+        "language": "en",
+        "questionnaire": "http://fhir.smart4health.eu/Questionnaire/post-session-questionnaire|1.0.0",
+        "status": "completed",
+        "subject": {
+          "display": "Marie Lux-Brennard"
+        },
+        "encounter": {
+          "identifier": {
+            "system": "http://fhir.smart4health.eu/CodeSystem/ittm-visit-id",
+            "value": "test-final"
+          }
+        },
+        "authored": "2020-07-16T00:04:08.987Z",
+        "item": [
+          {
+            "linkId": "current_pain_level",
+            "text": "Please indicate your current pain level",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA6114-8"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "average_pain_level",
+            "text": "Please indicate your average pain level during the past four weeks",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA10137-0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "maximimum_pain_level",
+            "text": "Please indicate your maximum pain level during the past four weeks",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA10140-4"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "lower_backpain_reduced",
+            "text": "Can you estimate (in percent %) how much your pain relieved?",
+            "answer": [
+              {
+                "valueDecimal": 12
+              }
+            ]
+          },
+          {
+            "linkId": "treatment_success",
+            "text": "Taken together, what is your impression on your present treatment success?",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA8967-7"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "taking_painkillers",
+            "text": "Are you taking painkillers at the moment?",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA33-6"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

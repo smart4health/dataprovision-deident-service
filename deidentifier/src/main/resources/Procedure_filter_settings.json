@@ -1,0 +1,44 @@
+{
+  "rules": [
+    {
+      "path": "Procedure.code.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "Procedure.encounter.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "Procedure.focalDevice",
+      "method": "redact"
+    },
+    {
+      "path": "Procedure.performed.ofType(DateTime)",
+      "method": "dateShift"
+    },
+    {
+      "path": "Procedure.performed.ofType(Period).end",
+      "method": "dateShift"
+    },
+    {
+      "path": "Procedure.performed.ofType(Period).start",
+      "method": "dateShift"
+    },
+    {
+      "path": "Procedure.performer.actor.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "Procedure.subject.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "Procedure.usedCode",
+      "method": "redact"
+    },
+    {
+      "path": "Procedure.usedReference",
+      "method": "redact"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Healthmetrix GmbH
+      comment: Sets up the job status table
+      changes:
+        - sqlFile:
+            path: db/sql/01-create-job-status.sql
+
+  - changeSet:
+      id: 2
+      author: Healthmetrix GmbH
+      comment: Sets up the resource log table
+      changes:
+        - sqlFile:
+            path: db/sql/02-create-resource-log.sql
+
+  - changeSet:
+      id: 3
+      author: Healthmetrix GmbH
+      comment: Creates a joined view between resources and jobs
+      changes:
+        - sqlFile:
+            path: db/sql/03-create-resource-view.sql
+
+  - changeSet:
+      id: 4
+      author: Healthmetrix GmbH
+      comment: Sets up the failed coding table
+      changes:
+        - sqlFile:
+            path: db/sql/04-create-coding-failed-table.sql
+
+  - changeSet:
+      id: 5
+      author: Healthmetrix GmbH
+      comment: Sets up the concept_id column for failed coding mappings
+      changes:
+        - sqlFile:
+            path: db/sql/05-create-coding-failed-concept-id-column.sql
+
+  - changeSet:
+      id: 6
+      author: Healthmetrix GmbH
+      comment: Add the rejected reason column to the resource table
+      changes:
+        - sqlFile:
+            path: db/sql/06-add-rejected-reason-column.sql
+
+  - changeSet:
+      id: 7
+      author: Healthmetrix GmbH
+      comment: Create the date shift table
+      changes:
+        - sqlFile:
+            path: db/sql/07-create-date-shift-table.sql
+  - changeSet:
+      id: 8
+      author: Healthmetrix GmbH
+      comment: Create column valid_start for table coding_failed, drop unique constraint
+      changes:
+        - sqlFile:
+            path: db/sql/08-create-valid-start-for-failed-codings.sql
+  - changeSet:
+      id: 9
+      author: Healthmetrix GmbH
+      comment: Drop table coding_failed
+      changes:
+        - sqlFile:
+            path: db/sql/09-drop-failed-coding-table.sql

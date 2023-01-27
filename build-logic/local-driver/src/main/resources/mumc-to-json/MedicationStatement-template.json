@@ -1,0 +1,16 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "REPLACE-ME",
+  "meta": {
+    "profile": [
+      "http://fhir.smart4health.eu/StructureDefinition/s4h-medicationstatement"
+    ]
+  },
+  "status": "active",
+  "subject": {
+    "display": "REPLACE-ME"
+  },
+  "effectivePeriod": {
+    "start": "2020-03-01"
+  }
+}

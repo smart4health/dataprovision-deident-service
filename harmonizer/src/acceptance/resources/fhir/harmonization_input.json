@@ -1,0 +1,122 @@
+{
+  "resourceType": "Basic",
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F41.1",
+        "display": "Generalized anxiety disorder"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F43.23",
+        "display": "Adjustment disorder with mixed anxiety and depressed mood"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F33.1",
+        "display": "Major depressive disorder, recurrent, moderate"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F43.22",
+        "display": "Adjustment disorder with anxiety"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F43.20",
+        "display": "Adjustment disorder, unspecified"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F41.9",
+        "display": "Anxiety disorder, unspecified"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F43.21",
+        "display": "Adjustment disorder with depressed mood"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "Z63.0",
+        "display": "Problems in relationship with spouse or partner"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F43.10",
+        "display": "Post-traumatic stress disorder, unspecified"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F43.12",
+        "display": "Post-traumatic stress disorder, chronic"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F33.0",
+        "display": "Major depressive disorder, recurrent, mild"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F32.1",
+        "display": "Major depressive disorder, single episode, moderate"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F34.1",
+        "display": "Dysthymic disorder"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F90.2",
+        "display": "Attention-deficit hyperactivity disorder, combined type"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F60.9",
+        "display": "Personality disorder, unspecified"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F40.228",
+        "display": "Other natural environment type phobia"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F06.1",
+        "display": "Catatonic disorder due to known physiological condition"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F43.25",
+        "display": "Adjustment disorder with mixed disturbance of emotions and conduct"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F32.0",
+        "display": "Major depressive disorder, single episode, mild"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F33.2",
+        "display": "Major depressive disorder, recurrent severe without psychotic features"
+      },
+      {
+        "system": "some unknown system",
+        "code": "some code",
+        "display": "some display"
+      },
+      {
+        "system": "some unknown system",
+        "code": "some code",
+        "display": "some display"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "8302-2",
+        "display": "standardized and harmonized"
+      }
+    ]
+  }
+}

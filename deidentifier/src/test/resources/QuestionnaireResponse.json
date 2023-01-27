@@ -1,0 +1,35 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "a81e6a27-6f57-4af7-9fbe-985bb189f350",
+  "questionnaire": {
+    "reference": "b6be677c-4146-4539-ae82-59133d1aed83"
+  },
+  "status": "in-progress",
+  "subject": {
+    "reference": "fcd48306-3f1a-481e-a76f-a1432f231eb4"
+  },
+  "item": [
+    {
+      "linkId": "weight",
+      "answer": [
+        {
+          "valueQuantity": {
+            "value": 73,
+            "unit": "kg"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "height",
+      "answer": [
+        {
+          "valueQuantity": {
+            "value": 185,
+            "unit": "cm"
+          }
+        }
+      ]
+    }
+  ]
+}

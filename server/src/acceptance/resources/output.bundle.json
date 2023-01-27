@@ -1,0 +1,850 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "40921780E652816B2A803715A02598B9BECA71BF5D36447F3C0AA9677567F0A1",
+        "type": [
+          {
+            "coding": [
+              {
+                "extension": [
+                  {
+                    "url": "/harmonization/extension/result",
+                    "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                  }
+                ],
+                "system": "http://fhir.smart4health.eu/CodeSystem/s4h-encounter-type",
+                "code": "back-pain-treatment",
+                "display": "Back pain treatment"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "3CD6B80EC25478A16CD5CE05B891D1B8B1C938C0AA2E75CC489351FF98F6FAD4"
+        },
+        "period": {
+          "start": "2019-11-21",
+          "end": "2019-11-21"
+        },
+        "partOf": {
+          "identifier": {
+            "system": "http://fhir.smart4health.eu/CodeSystem/ittm-case-id",
+            "value": "1AA2313C44E5865E9D9E0EFBF736C02053A753D1CEF4D983F3A26DA93356120A"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "B2CCC17A3D0CD323D18C854241E4AE144E34DE4516FBED86AF6050F2BA311312",
+        "type": [
+          {
+            "coding": [
+              {
+                "extension": [
+                  {
+                    "url": "/harmonization/extension/result",
+                    "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                  }
+                ],
+                "system": "http://fhir.smart4health.eu/CodeSystem/s4h-encounter-type",
+                "code": "back-pain-treatment",
+                "display": "Back pain treatment"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "3CD6B80EC25478A16CD5CE05B891D1B8B1C938C0AA2E75CC489351FF98F6FAD4"
+        },
+        "period": {
+          "start": "2020-08-27",
+          "end": "2020-08-27"
+        },
+        "partOf": {
+          "identifier": {
+            "system": "http://fhir.smart4health.eu/CodeSystem/ittm-case-id",
+            "value": "1AA2313C44E5865E9D9E0EFBF736C02053A753D1CEF4D983F3A26DA93356120A"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "58F178C70461BD8E4FF44E2B692DB323DDF77A586E3E1C6C0F70C043D83BDA12",
+        "category": [
+          {
+            "coding": [
+              {
+                "extension": [
+                  {
+                    "url": "/harmonization/extension/result",
+                    "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                  }
+                ],
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "/harmonization/extension/result",
+                  "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                }
+              ],
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body height"
+            }
+          ],
+          "text": "Body height"
+        },
+        "subject": {
+          "identifier": {
+            "value": "2173772E0F9901DDB5B85CB3D17E6D30F89F4112D63F1795D2DD6B060F376A35",
+            "system": "http://fhir.data4life.care/CodeSystem/user-id"
+          }
+        },
+        "effectiveDateTime": "2019-08-13"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "383684652D947B125BC1983A4ACFEB48AF8D975E7B4A1CED29EA9BA1B78D0C02",
+        "category": [
+          {
+            "coding": [
+              {
+                "extension": [
+                  {
+                    "url": "/harmonization/extension/result",
+                    "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                  }
+                ],
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "/harmonization/extension/result",
+                  "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                }
+              ],
+              "system": "http://loinc.org",
+              "code": "883-9",
+              "display": "ABO group [Type] in Blood"
+            }
+          ],
+          "text": "Blood group"
+        },
+        "subject": {
+          "identifier": {
+            "value": "2173772E0F9901DDB5B85CB3D17E6D30F89F4112D63F1795D2DD6B060F376A35",
+            "system": "http://fhir.data4life.care/CodeSystem/user-id"
+          }
+        },
+        "effectiveDateTime": "2019-10-29",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "/harmonization/extension/result",
+                  "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                }
+              ],
+              "system": "http://loinc.org",
+              "code": "LA19710-5",
+              "display": "Group A"
+            }
+          ],
+          "text": "Group A"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "6F5BB85614E3DE845CF5AEFEEE7B2A3957ED385A7C44CC67694CB0A897062BB4",
+        "category": [
+          {
+            "coding": [
+              {
+                "extension": [
+                  {
+                    "url": "/harmonization/extension/result",
+                    "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                  }
+                ],
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "social-history",
+                "display": "Social History"
+              }
+            ],
+            "text": "Social History"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "/harmonization/extension/result",
+                  "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                }
+              ],
+              "system": "http://loinc.org",
+              "code": "85658-3",
+              "display": "Occupation Type"
+            }
+          ],
+          "text": "Occupation Type"
+        },
+        "subject": {
+          "identifier": {
+            "value": "2173772E0F9901DDB5B85CB3D17E6D30F89F4112D63F1795D2DD6B060F376A35",
+            "system": "http://fhir.data4life.care/CodeSystem/user-id"
+          }
+        },
+        "effectiveDateTime": "2019-09-07",
+        "valueString": "Baker"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1ABA9902AF3DCDD43FDA1CE64B65F2EECF0EB8F160693237BA477A0580F452E6",
+        "category": [
+          {
+            "coding": [
+              {
+                "extension": [
+                  {
+                    "url": "/harmonization/extension/result",
+                    "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                  }
+                ],
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "/harmonization/extension/result",
+                  "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                }
+              ],
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            },
+            {
+              "extension": [
+                {
+                  "url": "/harmonization/extension/result",
+                  "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                }
+              ],
+              "system": "http://loinc.org",
+              "code": "3141-9",
+              "display": "Body weight Measured"
+            }
+          ]
+        },
+        "subject": {
+          "identifier": {
+            "value": "2173772E0F9901DDB5B85CB3D17E6D30F89F4112D63F1795D2DD6B060F376A35",
+            "system": "http://fhir.data4life.care/CodeSystem/user-id"
+          }
+        },
+        "effectiveDateTime": "2016-05-09"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "9965DEFF01372253DABDEC8F5B35708DF07C55CB43E0E838BF6DBC560FB4CA5E",
+        "category": [
+          {
+            "coding": [
+              {
+                "extension": [
+                  {
+                    "url": "/harmonization/extension/result",
+                    "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                  }
+                ],
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "/harmonization/extension/result",
+                  "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                }
+              ],
+              "system": "http://loinc.org",
+              "code": "10331-7",
+              "display": "Rh [Type] in Blood"
+            }
+          ],
+          "text": "Rh in blood"
+        },
+        "subject": {
+          "identifier": {
+            "value": "2173772E0F9901DDB5B85CB3D17E6D30F89F4112D63F1795D2DD6B060F376A35",
+            "system": "http://fhir.data4life.care/CodeSystem/user-id"
+          }
+        },
+        "effectiveDateTime": "2019-10-29",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "/harmonization/extension/result",
+                  "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                }
+              ],
+              "system": "http://loinc.org",
+              "code": "LA6576-8",
+              "display": "Positive"
+            }
+          ],
+          "text": "Positive"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "FD9D3D6DE723B1E03BC5BA8EB9577376AEB4ACC5E51735C50FF33A9944E78652",
+        "questionnaire": "http://fhir.smart4health.eu/Questionnaire/pre-session-questionnaire|1.0.0",
+        "status": "completed",
+        "subject": {
+          "identifier": {
+            "value": "2173772E0F9901DDB5B85CB3D17E6D30F89F4112D63F1795D2DD6B060F376A35",
+            "system": "http://fhir.data4life.care/CodeSystem/user-id"
+          }
+        },
+        "encounter": {
+          "identifier": {
+            "system": "http://fhir.smart4health.eu/CodeSystem/ittm-visit-id",
+            "value": "362BC3E2F258D85324591430A81CE98B686701B79BC34D417A6E4ED4ECAD37B5"
+          }
+        },
+        "authored": "2019-11-21T20:43:23.123Z",
+        "item": [
+          {
+            "linkId": "current_back_pain_level",
+            "text": "Please indicate your current pain level",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA6114-8"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "average_back_pain_level",
+            "text": "Please indicate your average pain level during the past four weeks",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA10137-0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "max_back_pain_level_4w",
+            "text": "Please indicate your maximum pain level during the past four weeks",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA10140-4"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "taking_painkillers",
+            "text": "Are you taking painkillers at the moment?",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA33-6"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "QuestionnaireResponse"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "8477E8EF0F95B2FF1F4BB9E2209E3A61DCF4FB55D0AB06C70D8279A432B9D90B",
+        "questionnaire": "http://fhir.smart4health.eu/Questionnaire/post-session-questionnaire|1.0.0",
+        "status": "completed",
+        "subject": {
+          "identifier": {
+            "value": "2173772E0F9901DDB5B85CB3D17E6D30F89F4112D63F1795D2DD6B060F376A35",
+            "system": "http://fhir.data4life.care/CodeSystem/user-id"
+          }
+        },
+        "encounter": {
+          "identifier": {
+            "system": "http://fhir.smart4health.eu/CodeSystem/ittm-visit-id",
+            "value": "E3F3D9F081CFCC8A191075EBDA035E62FF62FA33CF2797F597070E88ECEA0DCB"
+          }
+        },
+        "authored": "2020-08-27T00:04:08.987Z",
+        "item": [
+          {
+            "linkId": "current_pain_level",
+            "text": "Please indicate your current pain level",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA6114-8"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "average_pain_level",
+            "text": "Please indicate your average pain level during the past four weeks",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA10137-0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "maximimum_pain_level",
+            "text": "Please indicate your maximum pain level during the past four weeks",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA10140-4"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "lower_backpain_reduced",
+            "text": "Can you estimate (in percent %) how much your pain relieved?",
+            "answer": [
+              {
+                "valueDecimal": 12
+              }
+            ]
+          },
+          {
+            "linkId": "treatment_success",
+            "text": "Taken together, what is your impression on your present treatment success?",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA8967-7"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "taking_painkillers",
+            "text": "Are you taking painkillers at the moment?",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA33-6"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "QuestionnaireResponse"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "643350A4E09931DC81C1EB3BA98365C6C9CDD27A69295A4E481AD43EC03D9267",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "/harmonization/extension/result",
+                  "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                }
+              ],
+              "system": "mumc://our-system",
+              "code": "90061470",
+              "display": "Zuurstof"
+            },
+            {
+              "extension": [
+                {
+                  "url": "/harmonization/extension/result",
+                  "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                }
+              ],
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "7806",
+              "display": "oxygen"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "7E056BEB6837E31900885BDFB7D8E5D1FB8275AB51AE3D8DD905991FB794749A"
+        },
+        "effectivePeriod": {
+          "start": "2020-04-12"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "F804AFAEA4A42B9706E064661B4A383F007E2E53151C724F6F993CC4B4EF4FCC",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "/harmonization/extension/result",
+                  "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                }
+              ],
+              "system": "mumc://our-system",
+              "code": "557226",
+              "display": "Oogzalf (duratears z) tube 3,5g"
+            },
+            {
+              "extension": [
+                {
+                  "url": "/harmonization/extension/result",
+                  "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                }
+              ],
+              "system": "http://www.whocc.no/atc",
+              "code": "S01XA20"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "7E056BEB6837E31900885BDFB7D8E5D1FB8275AB51AE3D8DD905991FB794749A"
+        },
+        "effectivePeriod": {
+          "start": "2020-04-12"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "4B5E037A4AB09C88FA4BAB84607907ED6E02ECC33A5E8122804F4C6018AC45C3",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "/harmonization/extension/result",
+                  "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                }
+              ],
+              "system": "mumc://our-system",
+              "code": "768901",
+              "display": "Paracetamol tablet 500mg"
+            },
+            {
+              "extension": [
+                {
+                  "url": "/harmonization/extension/result",
+                  "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                }
+              ],
+              "system": "http://www.whocc.no/atc",
+              "code": "N02BE01"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "7E056BEB6837E31900885BDFB7D8E5D1FB8275AB51AE3D8DD905991FB794749A"
+        },
+        "effectivePeriod": {
+          "start": "2020-04-12"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationStatement"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Consent",
+        "id": "C4AB30EF0B8B0AFB1B554F9B5F2C662EE2CCE5B77800F87A07F2EA90F4949E5B",
+        "status": "active",
+        "scope": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "/harmonization/extension/result",
+                  "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                }
+              ],
+              "system": "http://terminology.hl7.org/CodeSystem/consentscope",
+              "code": "research"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "extension": [
+                  {
+                    "url": "/harmonization/extension/result",
+                    "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                  }
+                ],
+                "system": "http://terminology.hl7.org/CodeSystem/consentcategorycodes",
+                "code": "rsreid"
+              }
+            ]
+          }
+        ],
+        "patient": {
+          "reference": "5212636048A85D14086BC3D5A22F95B59089CBF186E1219ECDE656CA2F8E6DDC"
+        },
+        "dateTime": "2016-05-26T00:41:10-04:00",
+        "policyRule": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "/harmonization/extension/result",
+                  "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                }
+              ],
+              "system": "http://terminology.hl7.org/CodeSystem/consentpolicycodes",
+              "code": "ga4gh"
+            }
+          ]
+        },
+        "provision": {
+          "period": {
+            "start": "2015-10-10",
+            "end": "2016-10-10"
+          },
+          "provision": [
+            {
+              "type": "permit",
+              "code": [
+                {
+                  "coding": [
+                    {
+                      "extension": [
+                        {
+                          "url": "/harmonization/extension/result",
+                          "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                        }
+                      ],
+                      "system": "http://ga4gh.org",
+                      "code": "HMB"
+                    }
+                  ]
+                },
+                {
+                  "coding": [
+                    {
+                      "extension": [
+                        {
+                          "url": "/harmonization/extension/result",
+                          "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                        }
+                      ],
+                      "system": "http://ga4gh.org",
+                      "code": "RUO"
+                    }
+                  ]
+                },
+                {
+                  "coding": [
+                    {
+                      "extension": [
+                        {
+                          "url": "/harmonization/extension/result",
+                          "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                        }
+                      ],
+                      "system": "http://ga4gh.org",
+                      "code": "IRB"
+                    }
+                  ]
+                },
+                {
+                  "coding": [
+                    {
+                      "extension": [
+                        {
+                          "url": "/harmonization/extension/result",
+                          "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                        }
+                      ],
+                      "system": "http://ga4gh.org",
+                      "code": "GS-EU"
+                    }
+                  ]
+                },
+                {
+                  "coding": [
+                    {
+                      "extension": [
+                        {
+                          "url": "/harmonization/extension/result",
+                          "valueString": "SuccessAlreadyHarmonized, harmonized=true, standardized=true"
+                        }
+                      ],
+                      "system": "http://ga4gh.org",
+                      "code": "IS"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Consent"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "92321F32A18A8993D451BA72BD4DD98A5569F3225329563AC9412D64898091F5",
+        "identifier": [
+          {
+            "system": "http://fhir.data4life.care/CodeSystem/user-id",
+            "value": "2173772E0F9901DDB5B85CB3D17E6D30F89F4112D63F1795D2DD6B060F376A35"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1998",
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "Beispielstr. 17"
+            ],
+            "city": "Bärstadt",
+            "postalCode": "12345",
+            "country": "Germany"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    }
+  ]
+}

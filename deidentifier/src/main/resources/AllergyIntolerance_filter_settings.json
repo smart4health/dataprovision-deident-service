@@ -1,0 +1,24 @@
+{
+  "rules": [
+    {
+      "path": "AllergyIntolerance.clinicalStatus.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "AllergyIntolerance.code.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "AllergyIntolerance.onset.ofType(DateTime)",
+      "method": "dateShift"
+    },
+    {
+      "path": "AllergyIntolerance.onset.ofType(Period).end",
+      "method": "dateShift"
+    },
+    {
+      "path": "AllergyIntolerance.onset.ofType(Period).start",
+      "method": "dateShift"
+    }
+  ]
+}

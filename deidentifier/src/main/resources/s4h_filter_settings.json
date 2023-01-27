@@ -1,0 +1,136 @@
+{
+    "rules": [
+        {
+            "path": "id",
+            "method": "cryptoHash"
+        },
+        {
+            "path": "AdverseEvent.date",
+            "method": "dateShift"
+        },
+        {
+            "path": "AdverseEvent.recordedDate",
+            "method": "dateShift"
+        },
+        {
+            "path": "AdverseEvent.subject.descendants()",
+            "method": "keep"
+        },
+        {
+            "path": "BodySite.patient",
+            "method": "cryptoHash"
+        },
+        {
+            "path": "Location.address.city",
+            "method": "redact"
+        },
+        {
+            "path": "Location.address.country",
+            "method": "keep"
+        },
+        {
+            "path": "Location.address.line",
+            "method": "redact"
+        },
+        {
+            "path": "Location.address.postalCode",
+            "method": "redactZip"
+        },
+        {
+            "path": "Location.address.state",
+            "method": "redact"
+        },
+        {
+            "path": "Location.name",
+            "method": "redact"
+        },
+        {
+            "path": "Location.type",
+            "method": "keep"
+        },
+        {
+            "path": "Patient.address.descendants()",
+            "method": "keep"
+        },
+        {
+            "path": "Patient.birthDate",
+            "method": "dateRedact"
+        },
+        {
+            "path": "Patient.ethnicity",
+            "method": "keep"
+        },
+        {
+            "path": "Patient.gender",
+            "method": "keep"
+        },
+        {
+            "path": "Patient.generalPractitioner.descendants()",
+            "method": "keep"
+        },
+        {
+            "path": "Patient.identifier.descendants()",
+            "method": "keep"
+        },
+        {
+            "path": "Practitioner.birthDate",
+            "method": "redact"
+        },
+        {
+            "path": "Practitioner.gender",
+            "method": "redact"
+        },
+        {
+            "path": "Practitioner.identifier.descendants()",
+            "method": "keep"
+        },
+        {
+            "path": "Practitioner.name",
+            "method": "redact"
+        },
+        {
+            "path": "Practitioner.qualification",
+            "method": "redact"
+        },
+        {
+            "path": "PractitionerRole.location.descendants()",
+            "method": "keep"
+        },
+        {
+            "path": "PractitionerRole.specialty.descendants()",
+            "method": "keep"
+        },
+        {
+            "path": "DocumentReference.identifier",
+            "method": "cryptoHash"
+        },
+        {
+            "path": "DocumentReference.identifier.descendants()",
+            "method": "keep"
+        },
+        {
+            "path": "DocumentReference.status",
+            "method": "keep"
+        },
+        {
+            "path": "DocumentReference.type.descendants()",
+            "method": "keep"
+        },
+        {
+            "path": "DocumentReference.subject",
+            "method": "cryptoHash"
+        },
+        {
+            "path": "DocumentReference.subject.descendants()",
+            "method": "keep"
+        },
+        {
+            "path": "DocumentReference.content",
+            "method": "keep"
+        },
+        {
+            "path": "Consent.descendants()",
+            "method": "keep"
+        }
+    ]
+}

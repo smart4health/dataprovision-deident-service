@@ -1,0 +1,40 @@
+{
+  "rules": [
+    {
+      "path": "QuestionnaireResponse.identifier",
+      "method": "cryptoHash"
+    },
+    {
+      "path": "QuestionnaireResponse.identifier.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "QuestionnaireResponse.questionnaire",
+      "method": "keep"
+    },
+    {
+      "path": "QuestionnaireResponse.status",
+      "method": "keep"
+    },
+    {
+      "path": "QuestionnaireResponse.subject.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "QuestionnaireResponse.encounter",
+      "method": "cryptoHash"
+    },
+    {
+      "path": "QuestionnaireResponse.encounter.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "QuestionnaireResponse.authored",
+      "method": "dateShift"
+    },
+    {
+      "path": "QuestionnaireResponse.item.descendants()",
+      "method": "keep"
+    }
+  ]
+}

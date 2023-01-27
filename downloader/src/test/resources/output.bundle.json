@@ -1,0 +1,50 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "713E44D4CF781FFFBA9CA8892CAE517F2D275B5ABB7E5D7BA22AE794181403DC"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "5AFBF9865F400F2384A9DFA32BE642C75E49893D285EA7889962BF0ECD7375D4",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11557-6",
+              "display": "Carbon dioxide in blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/713E44D4CF781FFFBA9CA8892CAE517F2D275B5ABB7E5D7BA22AE794181403DC"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0A337FB75677223450D831E3B2EA17E279926B178ACBCF18569CBDCA5ECA1E78",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11557-6",
+              "display": "Carbon dioxide in blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "713E44D4CF781FFFBA9CA8892CAE517F2D275B5ABB7E5D7BA22AE794181403DC"
+        }
+      }
+    }
+  ]
+}

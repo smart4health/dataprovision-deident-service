@@ -1,0 +1,48 @@
+{
+  "rules": [
+    {
+      "path": "Condition.abatement.ofType(DateTime)",
+      "method": "dateShift"
+    },
+    {
+      "path": "Condition.abatement.ofType(Period).end",
+      "method": "dateShift"
+    },
+    {
+      "path": "Condition.abatement.ofType(Period).start",
+      "method": "dateShift"
+    },
+    {
+      "path": "Condition.asserter.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "Condition.clinicalStatus.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "Condition.code.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "Condition.encounter",
+      "method": "cryptoHash"
+    },
+    {
+      "path": "Condition.onset.ofType(DateTime)",
+      "method": "dateShift"
+    },
+    {
+      "path": "Condition.onset.ofType(Period).end",
+      "method": "dateShift"
+    },
+    {
+      "path": "Condition.onset.ofType(Period).start",
+      "method": "dateShift"
+    },
+    {
+      "path": "Condition.subject.descendants()",
+      "method": "keep"
+    }
+  ]
+}

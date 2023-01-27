@@ -1,0 +1,52 @@
+{
+  "rules": [
+    {
+      "path": "Observation.category.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "Observation.code.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "Observation.effective.ofType(DateTime)",
+      "method": "dateShift"
+    },
+    {
+      "path": "Observation.encounter.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "Observation.meta.source",
+      "method": "keep"
+    },
+    {
+      "path": "Observation.performer.ofType(Practitioner).descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "Observation.referenceRange.high.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "Observation.referenceRange.low.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "Observation.subject.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "Observation.value.ofType(CodeableConcept).descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "Observation.value.ofType(String)",
+      "method": "keep"
+    },
+    {
+      "path": "Observation.value[x]",
+      "method": "keep"
+    }
+  ]
+}

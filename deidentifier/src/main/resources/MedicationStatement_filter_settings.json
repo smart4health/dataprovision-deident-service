@@ -1,0 +1,64 @@
+{
+  "rules": [
+    {
+      "path": "MedicationStatement.basedOn.ofType(MedicationRequest).dispenseRequest.expectedSupplyDuration",
+      "method": "keep"
+    },
+    {
+      "path": "MedicationStatement.basedOn.ofType(MedicationRequest).dispenseRequest.numberOfRepeatsAllowed",
+      "method": "keep"
+    },
+    {
+      "path": "MedicationStatement.basedOn.ofType(MedicationRequest).dispenseRequest.quantity",
+      "method": "keep"
+    },
+    {
+      "path": "MedicationStatement.basedOn.ofType(MedicationRequest).dosageInstruction.route",
+      "method": "keep"
+    },
+    {
+      "path": "MedicationStatement.basedOn.ofType(MedicationRequest).dosageInstruction.text",
+      "method": "keep"
+    },
+    {
+      "path": "MedicationStatement.basedOn.ofType(MedicationRequest).requester",
+      "method": "cryptoHash"
+    },
+    {
+      "path": "MedicationStatement.basedOn.ofType(MedicationRequest).validity.ofType(Period).end",
+      "method": "dateShift"
+    },
+    {
+      "path": "MedicationStatement.basedOn.ofType(MedicationRequest).validity.ofType(Period).start",
+      "method": "dateShift"
+    },
+    {
+      "path": "MedicationStatement.context.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "MedicationStatement.effective.ofType(Period).end",
+      "method": "dateShift"
+    },
+    {
+      "path": "MedicationStatement.effective.ofType(Period).start",
+      "method": "dateShift"
+    },
+    {
+      "path": "MedicationStatement.medication.batch.lotNumber",
+      "method": "redact"
+    },
+    {
+      "path": "MedicationStatement.medication.ofType(CodeableConcept).descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "MedicationStatement.statusReason.descendants()",
+      "method": "keep"
+    },
+    {
+      "path": "MedicationStatement.subject.descendants()",
+      "method": "keep"
+    }
+  ]
+}

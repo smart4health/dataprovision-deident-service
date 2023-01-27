@@ -1,0 +1,202 @@
+server:
+  shutdown: graceful
+
+management:
+  endpoints:
+    enabled-by-default: no
+    web.exposure.include: health,metrics,prometheus
+  endpoint.health.enabled: yes
+  endpoint.prometheus.enabled: yes
+  endpoint.metrics.enabled: yes
+  metrics:
+    enable:
+      # Excluded are spring.data.repository.invocations by DeidentApplication auto config exclusion
+      all: yes
+
+spring:
+  cloud.vault.enabled: false
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: false
+    hibernate.ddl-auto: validate
+    open-in-view: false
+
+  liquibase:
+    change-log: classpath:db/changelog.yaml
+    enabled: false
+
+  profiles:
+    group:
+      local:
+        - local-rp
+        - qomop
+        - postgres
+        - debug-cache
+      dev:
+        - remote-rp
+        - secrets-aws
+        - rds
+        - cloudwatch-metrics
+        - json-log
+        - qomop
+        - debug-cache
+      prod:
+        - remote-rp
+        - secrets-vault
+        - rds
+        - json-log
+        - qomop
+      acceptance:
+        - local-rp
+        - postgres
+      integration:
+        - local-rp
+        - qomop
+        - postgres
+        - secrets-aws
+
+json-filter:
+  settings:
+    - s4h_filter_settings.json
+    - Condition_filter_settings.json
+    - Encounter_filter_settings.json
+    - MedicationStatement_filter_settings.json
+    - Observation_filter_settings.json
+    - Procedure_filter_settings.json
+    - QuestionnaireResponse_filter_settings.json
+    - AllergyIntolerance_filter_settings.json
+
+date-shift:
+  # First, apparently spring uses snakeyaml to parse this file.  snakeyaml is
+  # supposed to parse date looking things as Dates, but for us apparently it wasn't,
+  # as this used to be injected as a string, and it was parsed fine
+  # Updating liquibase from 4.15.0 to 4.16.1 brought in a new version of the snakeyaml parser,
+  # which I think changes this behavior.  I tried to go through the source code on bitbucket,
+  # but found no hints as to why...
+  # Anyway, this type annotation disables that
+  cutoff-start: !!str 1990-01-01
+
+contextualizer:
+  identifier-system: "http://fhir.data4life.care/CodeSystem/user-id"
+
+patient-deduplicator:
+  chdp-system: "http://fhir.smart4health.eu/CodeSystem/s4h-fhir-tag"
+  chdp-code: "medical-history"
+
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: docs-ui.html
+  api-docs:
+    path: /docs
+
+documentation-info:
+  title: Deident Service
+  description: Service that serves in the data ingestion pipeline to deidentify and harmonize FHIR resources and provide them to the research platform
+  contact:
+    name: Healthmetrix GmbH
+    email: admin@healthmetrix.com
+
+---
+spring.config.activate.on-profile: json-log
+
+spring.main.banner-mode: off
+
+---
+# for local testing _only_
+spring.config.activate.on-profile: postgres
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/development
+    username: username
+    password: password
+
+  liquibase.enabled: true
+
+---
+spring.config.activate.on-profile: rds
+
+spring:
+  liquibase.enabled: true
+rds:
+  endpoint: # set at runtime
+  database-name: # set at runtime
+
+---
+spring.config.activate.on-profile: secrets-aws
+
+secrets.namespace: # override in other profiles
+secrets.qomop-namespace: # override in other profiles
+
+---
+spring.config.activate.on-profile: remote-rp
+
+rp.upload: "https://alp-dd-s4h-staging.hpsgc.de/fhir/s4h/Bundle"
+
+---
+spring.config.activate.on-profile: local-rp
+
+rp.upload: "http://localhost:4040/rp"
+
+---
+spring.config.activate.on-profile: cloudwatch-metrics
+
+management.metrics.enable.jvm: yes
+cloudwatch-metrics:
+  namespace: "" # override per stage
+  step: PT60S
+
+---
+# dev stage
+spring.config.activate.on-profile: dev
+
+secrets:
+  namespace: "deident/dev"
+  qomop-namespace: "qomop/dev"
+cloudwatch-metrics.namespace: "deident/dev"
+qomop.base-url: "https://qomop.dev.healthmetrix.com"
+debug-cache-max-size: 10
+
+---
+# prod stage
+spring.config.activate.on-profile: prod
+
+qomop.base-url: "" # injected
+
+management.server.port: 8081
+---
+spring.config.activate.on-profile: integration
+
+secrets:
+  namespace: "deident/dev"
+  qomop-namespace: "qomop/dev"
+qomop.base-url: "https://qomop.dev.healthmetrix.com"
+
+---
+spring.config.activate.on-profile: local
+
+qomop.base-url: "http://localhost:6060"
+debug-cache-max-size: 30
+
+---
+spring.config.activate.on-profile: secrets-vault
+
+spring.application.name: deident
+spring.cloud:
+  vault:
+    enabled: true
+    host: localhost
+    port: 8200
+    scheme: http
+    authentication: APPROLE
+    token: # injected on deployment
+    app-role:
+      role: deident
+spring.config:
+  import:
+    - vault://secret/deident/rds-credentials?prefix=rds-credentials.
+    - vault://secret/deident/research-platform?prefix=research-platform.
+
+---
