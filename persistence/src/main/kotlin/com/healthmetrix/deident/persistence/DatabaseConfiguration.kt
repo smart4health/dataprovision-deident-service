@@ -15,6 +15,7 @@ import javax.sql.DataSource
 
 @Configuration
 @EnableJpaRepositories
+@Profile("rds | postgres")
 class DatabaseConfiguration {
 
     // auto configuration disabled to allow default profile with no jpa
