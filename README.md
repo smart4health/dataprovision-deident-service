@@ -1,5 +1,13 @@
 # Smart4Health Data-provision De-Identification Service
 
+## Acknowledgements
+
+<img src="./img/eu.jpg" align="left" alt="European Flag" width="60">
+
+This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 826117.
+
+## About
+
 The De-Identification Service takes a FHIR bundle that has been provided by a citizen via
 the [MyScience App](https://github.com/smart4health/my-science-app), strips all identifying information and uploads it
 to the Smart4Health Research Platform.
