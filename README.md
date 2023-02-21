@@ -111,3 +111,29 @@ docker run --rm -p 8200:8200 --cap-add=IPC_LOCK --name=vault-dev -e 'VAULT_DEV_R
 ```shell
 SPRING_CLOUD_VAULT_TOKEN=$(sh vault_local.sh | tail -1) SPRING_PROFILES_ACTIVE=secrets-vault ./gradlew bootRun
 ```
+
+
+## Code Stats
+Generated with [tokei](https://github.com/XAMPPRocky/tokei)
+
+```
+===============================================================================
+ Language            Files        Lines         Code     Comments       Blanks
+===============================================================================
+ Batch                   1           91           70            0           21
+ JSON                   32         9214         9213            0            1
+ Kotlin                134         6380         5105          298          977
+ Shell                   2          273          124          117           32
+ SQL                     9           47           46            0            1
+ Plain Text              1           12            0           10            2
+ TOML                    1          111           81            4           26
+ XML                     2          177          169            8            0
+ YAML                    2          272          218           11           43
+-------------------------------------------------------------------------------
+ Markdown                1          113            0           74           39
+ |- Shell                1            7            7            0            0
+ (Total)                            120            7           74           39
+===============================================================================
+ Total                 185        16690        15026          522         1142
+===============================================================================
+```
